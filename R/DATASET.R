@@ -168,3 +168,13 @@
 #'}
 #' @source \url{http://data.bandung.go.id/dataset/penanaman-pohon-di-kota-bandung/resource/ae7da370-de47-4d9a-8d7f-1c6922fdaecb}
 "tanam_pohon2"
+
+#' @title Rata-rata Produksi Sampah Berdasarkan Sumber Sampah di Kota Bandung
+#' @description Dataset ini berisi data rata-rata produksi sampah berdasarkan sumber sampah di Kota Bandung.
+#' @format Tibble dengan 6 baris dan 2 variabel:
+#' \describe{
+#'   \item{\code{Sumber}}{sumber sampah}
+#'   \item{\code{Prod_sampah}}{produksi sampah (ton)}
+#'}
+#' @source \url{http://data.bandung.go.id/dataset/rata-rata-produksi-sampah-berdasarkan-sumber-sampah-di-kota-bandung}
+"sw_prod_sumber"

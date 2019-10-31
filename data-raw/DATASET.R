@@ -90,8 +90,12 @@ tanam_pohon1 <- read_csv("http://data.bandung.go.id/dataset/ee792310-f8d9-4812-9
 tanam_pohon2 <- read_csv("http://data.bandung.go.id/dataset/ee792310-f8d9-4812-9fc2-f4d17c765fc7/resource/ae7da370-de47-4d9a-8d7f-1c6922fdaecb/download/rekapitulasi-penanaman-pohon-di-kota-bandung-tahun-2013.csv")%>%
   clean_names()
 
+sw_prod_sumber <- read_csv("http://data.bandung.go.id/dataset/08434bde-58c5-4355-8d88-b779a278aa32/resource/95bcdbc2-6f0b-4bf0-8958-87ebe946cf77/download/rata-rata-produksi-sampah-di-kota-bandung-tahun-2017.csv") %>%
+  select(-X3, Sumber, Prod_sampah = `ProduksiSampah(ton)`) %>%
+  drop_na()
+
 
 usethis::use_data(kual_sungai, KangPisMan, mitra_KangPisMan, bank_sampah,
                   taman, tps, bendungan, mata_air, anak_sungai, pelanggan_am,
-                  izin_lingkungan, tanam_pohon1, tanam_pohon2,
+                  izin_lingkungan, tanam_pohon1, tanam_pohon2, sw_prod_sumber,
                   overwrite = TRUE)
