@@ -6,7 +6,7 @@
 \title{Kegiatan Sosialisasi KangPisMan Kota Bandung}
 \format{Tibble dengan 27 baris dan 5 variabel:
 \describe{
-  \item{\code{No}}{}
+  \item{\code{No}}{ }
   \item{\code{Tanggal}}{tanggal pelaksanaan sosialisasi}
   \item{\code{Kegiatan}}{nama kegiatan}
   \item{\code{Narasumber}}{narasumber kegiatan sosialisasi}

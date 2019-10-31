@@ -6,7 +6,7 @@
 \title{Kualitas Air Sungai Kota Bandung Tahun 2018}
 \format{Tibble dengan 56 baris dan 5 variabel:
 \describe{
-  \item{\code{No}}{}
+  \item{\code{No}}{ }
   \item{\code{Sungai}}{nama sungai}
   \item{\code{Storet_Score}}{nilai indeks STORET}
   \item{\code{Golongan}}{golongan kelas sungai berdasarkan nilai indeks STORET}
