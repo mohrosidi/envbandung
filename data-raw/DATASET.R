@@ -120,8 +120,103 @@ sw3 <- read_csv("http://data.bandung.go.id/dataset/eb104f7f-fdf3-4505-b532-b3ba8
   drop_na()
 sw_jenis <- bind_rows(sw1,sw2,sw3)
 
+angin1 <- read_csv("http://data.bandung.go.id/dataset/03b7fc16-269d-48e3-aa78-e1b9c3ee2ab4/resource/7f2c146c-805c-487c-9659-05efbf4bdfa0/download/kecepatan-angin-kota-bandung-2013.csv") %>%
+  mutate(tahun=2013, tanggal=1,
+         bulan = case_when(bulan=="Januari"~1,
+                           bulan=="Februari"~2,
+                           bulan=="Maret"~3,
+                           bulan=="April"~4,
+                           bulan=="Mei"~5,
+                           bulan=="Juni"~6,
+                           bulan=="Juli"~7,
+                           bulan=="Agustus"~8,
+                           bulan=="September"~9,
+                           bulan=="Oktober"~10,
+                           bulan=="Nopember"~11,
+                           bulan=="Desember"~12,
+                           TRUE ~ 13)) %>%
+  select(tanggal, bulan, tahun, kec_ratarata, kec_terbesar) %>%
+  unite(tahun, bulan, tanggal, col="tanggal", sep="-") %>%
+  mutate(tanggal=as.Date.character(tanggal))
+angin2 <- read_csv("http://data.bandung.go.id/dataset/03b7fc16-269d-48e3-aa78-e1b9c3ee2ab4/resource/292ef032-d623-4ced-bf8f-be5e7b69ec34/download/kecepatan--angin--menurut--bulan--di--kota-bandung-2014.csv") %>%
+  rename(bulan = Bulan, kec_ratarata=`Kecepatan angin rata-rata`,kec_terbesar=`Kecepatan angin terbesar`) %>%
+  mutate(tahun=2014, tanggal=1,
+         bulan = case_when(bulan=="Januari"~1,
+                           bulan=="Februari"~2,
+                           bulan=="Maret"~3,
+                           bulan=="April"~4,
+                           bulan=="Mei"~5,
+                           bulan=="Juni"~6,
+                           bulan=="Juli"~7,
+                           bulan=="Agustus"~8,
+                           bulan=="September"~9,
+                           bulan=="Oktober"~10,
+                           bulan=="November"~11,
+                           bulan=="Desember"~12,
+                           TRUE ~ 13)) %>%
+  select(tanggal, bulan, tahun, kec_ratarata, kec_terbesar) %>%
+  unite(tahun, bulan, tanggal, col="tanggal", sep="-") %>%
+  mutate(tanggal=as.Date.character(tanggal))
+angin3 <- read_csv("http://data.bandung.go.id/dataset/03b7fc16-269d-48e3-aa78-e1b9c3ee2ab4/resource/71cef9f9-fef1-42f6-bbef-01cd20ea3004/download/kecepatan-angin-menurut-bulan-di-kota-bandung-2015.csv") %>%
+  rename(bulan = Bulan, kec_ratarata=`Kecepatan Rata-rata Angin (knot)`,kec_terbesar=`Kecepatan Terbesar Angin (knot)`) %>%
+  mutate(tahun=2015, tanggal=1,
+         bulan = case_when(bulan=="Januari/January"~1,
+                           bulan=="Februari/February"~2,
+                           bulan=="Maret/March"~3,
+                           bulan=="April/April"~4,
+                           bulan=="Mei/May"~5,
+                           bulan=="Juni/June"~6,
+                           bulan=="Juli/July"~7,
+                           bulan=="Agustus/August"~8,
+                           bulan=="September/September"~9,
+                           bulan=="Oktober/October"~10,
+                           bulan=="Nopember/November"~11,
+                           bulan=="Desember/December"~12,
+                           TRUE ~ 13)) %>%
+  select(tanggal, bulan, tahun, kec_ratarata, kec_terbesar) %>%
+  unite(tahun, bulan, tanggal, col="tanggal", sep="-") %>%
+  mutate(tanggal=as.Date.character(tanggal))
+angin4 <- read_csv("http://data.bandung.go.id/dataset/03b7fc16-269d-48e3-aa78-e1b9c3ee2ab4/resource/1e61ddab-5cb7-4e3b-a9cc-b2214fd093da/download/kecepatan-angin-menurut-bulan-di-kota-bandung-2016.csv") %>%
+  rename(bulan = Bulan, kec_ratarata=`Kecepatan Rata-rata(knot)`,kec_terbesar=`Kecepatan Terbesar (knot)`) %>%
+  mutate(tahun=2016, tanggal=1,
+         bulan = case_when(bulan=="Januari / January"~1,
+                           bulan=="Februari / February"~2,
+                           bulan=="Maret/March"~3,
+                           bulan=="April / April"~4,
+                           bulan=="M e i / M a y"~5,
+                           bulan=="Juni / June"~6,
+                           bulan=="Juli / July"~7,
+                           bulan=="Agustus / August"~8,
+                           bulan=="September / September"~9,
+                           bulan=="Oktober / October"~10,
+                           bulan=="November / November"~11,
+                           bulan=="Desember / December"~12,
+                           TRUE ~ 13)) %>%
+  select(tanggal, bulan, tahun, kec_ratarata, kec_terbesar) %>%
+  unite(tahun, bulan, tanggal, col="tanggal", sep="-") %>%
+  mutate(tanggal=as.Date.character(tanggal))
+angin5 <- read_csv("http://data.bandung.go.id/dataset/03b7fc16-269d-48e3-aa78-e1b9c3ee2ab4/resource/2918a045-a4d1-4559-a0f4-f945373b5ce6/download/kecepatan-angin-menurut-bulan-di-kota-bandung-2017.csv") %>%
+  mutate(tahun=2017, tanggal=1,
+         Bulan = case_when(Bulan=="Januari"~1,
+                           Bulan=="Februari"~2,
+                           Bulan=="Maret"~3,
+                           Bulan=="April"~4,
+                           Bulan=="Mei"~5,
+                           Bulan=="Juni"~6,
+                           Bulan=="Juli"~7,
+                           Bulan=="Agustus"~8,
+                           Bulan=="September"~9,
+                           Bulan=="Oktober"~10,
+                           Bulan=="November"~11,
+                           Bulan=="Desember"~12,
+                           TRUE ~ 13)) %>%
+  select(tanggal, bulan=Bulan, tahun, kec_ratarata=`Kecepatan Angin Rata-rata (knot)`,kec_terbesar=`Kecepatan Angin Terbesar (knot)`) %>%
+  unite(tahun, bulan, tanggal, col="tanggal", sep="-") %>%
+  mutate(tanggal=as.Date.character(tanggal))
+angin<-bind_rows(angin1, angin2, angin3, angin4, angin5)
+
 usethis::use_data(kual_sungai, KangPisMan, mitra_KangPisMan, bank_sampah,
                   taman, tps, bendungan, mata_air, anak_sungai, pelanggan_am,
                   izin_lingkungan, tanam_pohon1, tanam_pohon2, sw_prod_sumber,
-                  sw_jenis,
+                  sw_jenis, angin,
                   overwrite = TRUE)

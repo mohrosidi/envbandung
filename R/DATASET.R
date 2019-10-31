@@ -190,3 +190,14 @@
 #'}
 #' @source \url{http://data.bandung.go.id/dataset/produksi-jenis-sampah-menurut-jenisnya-tahun-2014}
 "sw_jenis"
+
+#' @title Kecepatan Angin Menurut Bulan Di Kota Bandung
+#' @description Dataset ini berisi Kecepatan Angin Menurut Bulan Di Kota Bandung.
+#' @format Tibble dengan 60 baris dan 3 variabel:
+#' \describe{
+#'   \item{\code{tanggal}}{tanggal pengukuran}
+#'   \item{\code{kec_ratarata}}{kecepatan angin rata-rata (knot)}
+#'   \item{\code{kec_terbesar}}{kecepatan angin terbesar (knot)}
+#'}
+#' @source \url{http://data.bandung.go.id/dataset/kecepatan-angin-menurut-bulan-di-kota-bandung-2015}
+"angin"
