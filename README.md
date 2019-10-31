@@ -1,6 +1,6 @@
 # envbandung
 
-envbandung merupakan `R` *package* yang berisi kumpulan data lingkungan hidup yang di ambil dari Open Data Kota Bandung. Dataset pada *package* ini telah dilakukan transformasi sehingga memenuhi kaidah *tidy data*.
+`envbandung` merupakan `R` *package* yang berisi kumpulan data lingkungan hidup yang di ambil dari Open Data Kota Bandung. Dataset pada *package* ini telah dilakukan transformasi sehingga memenuhi kaidah *tidy data*.
 
 ## Cara Pemasangan
 
