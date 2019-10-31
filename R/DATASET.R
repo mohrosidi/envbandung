@@ -201,3 +201,16 @@
 #'}
 #' @source \url{http://data.bandung.go.id/dataset/kecepatan-angin-menurut-bulan-di-kota-bandung-2015}
 "angin"
+
+#' @title Keadaan Udara Menurut Bulan di Kota Bandung
+#' @description Dataset ini berisi data Keadaan Udara Menurut Bulan di Kota Bandung.
+#' @format Tibble dengan 60 baris dan 5 variabel:
+#' \describe{
+#'   \item{\code{Bulan}}{bulan pengamatan}
+#'   \item{\code{Tahun}}{tahun pengamatan}
+#'   \item{\code{Penguapan}}{nilai penguapan dalam mm}
+#'   \item{\code{Tekanan_udara}}{nilai tekanan udara dalam mb}
+#'   \item{\code{Kelembapan_nisbi}}{nilai kelembapan nisbi dalam "%"}
+#'}
+#' @source \url{http://data.bandung.go.id/dataset/keadaan-udara-menurut-bulan-di-kota-bandung-2015/resource/67ef3f2c-aed8-4a77-bacf-94ea2b4e4248}
+"udara"

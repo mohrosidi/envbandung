@@ -215,8 +215,38 @@ angin5 <- read_csv("http://data.bandung.go.id/dataset/03b7fc16-269d-48e3-aa78-e1
   mutate(tanggal=as.Date.character(tanggal))
 angin<-bind_rows(angin1, angin2, angin3, angin4, angin5)
 
+air1 <- read_csv("http://data.bandung.go.id/dataset/0ce8520e-5fef-404c-992c-bced50a719a4/resource/67ef3f2c-aed8-4a77-bacf-94ea2b4e4248/download/keadaan-udara-menurut-bulan-kota-bandung-2013.csv") %>%
+  mutate(Tahun=2013) %>%
+  select(Bulan, Tahun, Penguapan=`Penguapan (mm)`
+         , Tekanan_udara=`Tekanan udara (mb)`, Kelembapan_nisbi=`Kelembapan Nisbi (%)`)
+air2 <- read_csv("http://data.bandung.go.id/dataset/0ce8520e-5fef-404c-992c-bced50a719a4/resource/4d6661dd-364c-4e7f-99b1-2d91d3a94a13/download/keadaan-udara-menurut-bulan-kota-bandung-2014.csv") %>%
+  mutate(Tahun=2014) %>%
+  select(Bulan, Tahun, Penguapan=`Penguapan (mm)`
+         , Tekanan_udara=`Tekanan udara (mb)`, Kelembapan_nisbi=`Kelembapan Nisbi (%)`)
+air3 <- read_csv("http://data.bandung.go.id/dataset/0ce8520e-5fef-404c-992c-bced50a719a4/resource/a70ac0ba-57a4-4bde-b68b-6ed3c4abfe45/download/keadaan-udara-menurut-bulan-di-kota-bandung-2015.csv") %>%
+  mutate(Tahun=2015) %>%
+  select(Bulan, Tahun, Penguapan=`Penguapan (mm)`
+         , Tekanan_udara=`Tekanan Udara (mb)`, Kelembapan_nisbi=`Kelembapan Nisbi`) %>%
+  separate(Bulan, into=c("Bulan", "buang"), sep="/") %>%
+  mutate(Bulan=ifelse(Bulan=="Nopember",buang, Bulan)) %>%
+  select(-buang)
+air4 <- read_csv("http://data.bandung.go.id/dataset/0ce8520e-5fef-404c-992c-bced50a719a4/resource/47c51325-340d-4b40-9b19-d661fb890480/download/keadaan-udara-menurut-bulan-di-kota-bandung-2016.csv") %>%
+  mutate(Tahun=2016) %>%
+  select(Bulan, Tahun, Penguapan=`Penguapan(mm)`
+         , Tekanan_udara=`Tekanan Udara (mb)`, Kelembapan_nisbi=`Kelembapan Nisbi (%)`) %>%
+  separate(Bulan, into=c("Bulan", "buang"), sep=" / ") %>%
+  mutate(Bulan=ifelse(Bulan=="M e i","Mei", Bulan)) %>%
+  select(-buang) %>%
+  drop_na()
+air5 <- read_csv("http://data.bandung.go.id/dataset/0ce8520e-5fef-404c-992c-bced50a719a4/resource/ed19dfa3-03d0-4210-a88e-ce8e977946a2/download/keadaan-udara-menurut-bulan-di-kota-bandung-2017.csv") %>%
+  mutate(Tahun=2017) %>%
+  select(Bulan=`B u l a n`, Tahun, Penguapan=`Penguapan (mm)`
+         , Tekanan_udara=`Tekanan Udara (mb)`, Kelembapan_nisbi=`Kelembapan Nisbi (%)`) %>%
+  drop_na()
+udara <- bind_rows(air1,air2,air3,air4,air5)
+
 usethis::use_data(kual_sungai, KangPisMan, mitra_KangPisMan, bank_sampah,
                   taman, tps, bendungan, mata_air, anak_sungai, pelanggan_am,
                   izin_lingkungan, tanam_pohon1, tanam_pohon2, sw_prod_sumber,
-                  sw_jenis, angin,
+                  sw_jenis, angin, udara,
                   overwrite = TRUE)
