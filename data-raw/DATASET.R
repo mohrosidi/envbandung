@@ -1,6 +1,7 @@
 ## code to prepare `DATASET` dataset goes here
 
 library(tidyverse)
+library(janitor)
 
 kual_sungai <- read_csv("http://data.bandung.go.id/dataset/507d8f81-76cc-43a1-b0ef-929a59e1a5ea/resource/a8b04e34-399c-4cd5-8f7e-a4f4ecbca7b5/download/data-kualitas-air-sungai-tahun-2018.csv") %>%
   select(No, Sungai = `Nama Sungai`, Storet_Score = `Nilai Indeks Storet`,
@@ -61,6 +62,29 @@ am4 <- read_csv("http://data.bandung.go.id/dataset/ac8e7947-9f98-458b-be51-06fa7
   mutate(Tahun=2018)
 pelanggan_am <- bind_rows(am1, am2, am3, am4)
 
+il1 <- read_csv("http://data.bandung.go.id/dataset/6eba04c7-555f-418d-a7b9-6d7695ccf91e/resource/9684c1ee-6e3c-419d-aea6-03520e708fce/download/data-izin-lingkungan-tahun-2015.csv") %>%
+  clean_names() %>%
+  mutate(tahun=2015)%>%
+  mutate_all(function(x){ifelse(x=='-', NA, x)})%>%
+  select(no, nomor_izin, tahun, jenis_lingkungan:bentuk_perusahaan)
+il2 <- read_csv("http://data.bandung.go.id/dataset/6eba04c7-555f-418d-a7b9-6d7695ccf91e/resource/6594a2a0-c92b-4b71-8471-841548cc097d/download/data-izin-lingkungan-tahun-2016.csv")%>%
+  clean_names() %>%
+  mutate(tahun=2016)%>%
+  mutate_all(function(x){ifelse(x=='-', NA, x)})%>%
+  select(no, nomor_izin, tahun, jenis_lingkungan:bentuk_perusahaan)
+il3 <- read_csv("http://data.bandung.go.id/dataset/6eba04c7-555f-418d-a7b9-6d7695ccf91e/resource/0a9c1ab8-d529-419b-b6cb-ac17b4fd3642/download/data-izin-lingkungan-tahun-2017.csv")%>%
+  clean_names() %>%
+  mutate(tahun=2017)%>%
+  mutate_all(function(x){ifelse(x=='-', NA, x)})%>%
+  select(no, nomor_izin, tahun, jenis_lingkungan:bentuk_perusahaan)
+il4 <- read_csv("http://data.bandung.go.id/dataset/6eba04c7-555f-418d-a7b9-6d7695ccf91e/resource/791d826a-bd6b-47be-a580-1e0ebe7287f2/download/data-izin-lingkungan-tahun-2018.csv")%>%
+  clean_names() %>%
+  mutate(tahun=2018)%>%
+  mutate_all(function(x){ifelse(x=='-', NA, x)})%>%
+  select(no, nomor_izin, tahun, jenis_lingkungan:bentuk_perusahaan)
+izin_lingkungan <- bind_rows(il1,il2,il3,il4)
+
 usethis::use_data(kual_sungai, KangPisMan, mitra_KangPisMan, bank_sampah,
                   taman, tps, bendungan, mata_air, anak_sungai, pelanggan_am,
+                  izin_lingkungan,
                   overwrite = TRUE)

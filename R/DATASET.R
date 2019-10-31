@@ -131,3 +131,18 @@
 #' @note Golongan tarif : 1A (Sosial Umum), 1B (Sosial Khusus), 2A1 (Rumah Tangga), 2A2 (Rumah Tangga), 2A3 (Rumah Tangga), 2A4 (Rumah Tangga), 2B (Instansi), 3A (Niaga Kecil), 3B (Niaga Menengah/Besar), 4A (Industri Kecil), 4B (Industri Menengah/Besar)
 #' @source \url{http://data.bandung.go.id/dataset/jumlah-pelanggan-air-minum-menurut-golongan-tarif-di-kota-bandung}
 "pelanggan_am"
+
+#' @title Izin Lingkungan di Kota Bandung
+#' @description Dataset ini berisi data izin lingkungan di Kota Bandung.
+#' @format Tibble dengan 321 baris dan 7 variabel:
+#' \describe{
+#'   \item{\code{no}}{}
+#'   \item{\code{nomor_izin}}{}
+#'   \item{\code{tahun}}{}
+#'   \item{\code{jenis_lingkungan}}{}
+#'   \item{\code{nama_pemohon}}{}
+#'   \item{\code{nama_perusahaan}}{}
+#'   \item{\code{bentuk_perusahaan}}{}
+#'}
+#' @source \url{http://data.bandung.go.id/dataset/izin-lingkungan-di-kota-bandung}
+"izin_lingkungan"
