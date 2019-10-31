@@ -94,8 +94,34 @@ sw_prod_sumber <- read_csv("http://data.bandung.go.id/dataset/08434bde-58c5-4355
   select(-X3, Sumber, Prod_sampah = `ProduksiSampah(ton)`) %>%
   drop_na()
 
+sw1 <- read_csv("http://data.bandung.go.id/dataset/eb104f7f-fdf3-4505-b532-b3ba8654b8cc/resource/7e17430b-f92f-4152-9156-9d43f9775583/download/produksi-sampah-menurut-jenisnya-tahun-2014.csv") %>%
+  mutate(Tahun=2014, `Jenis Sampah`=tolower(`Jenis Sampah`)) %>%
+  select(Tahun, Jenis_sampah=`Jenis Sampah`, Prod_sampah= `Produksi Sampah (m3/hari)`, Persentase) %>%
+  mutate(Jenis_sampah = ifelse(Jenis_sampah=="sisa makanan/let", "sisa makanan",Jenis_sampah),
+         Jenis_sampah = ifelse(Jenis_sampah=="kayu.ranting.daun","kayu, ranting, daun",Jenis_sampah),
+         Jenis_sampah = ifelse(Jenis_sampah=="kertas/paper","kertas",Jenis_sampah),
+         Jenis_sampah = ifelse(Jenis_sampah=="plastik/plastic/","plastik",Jenis_sampah),
+         Jenis_sampah = ifelse(Jenis_sampah=="logam/ metal","logam",Jenis_sampah),
+         Jenis_sampah = ifelse(Jenis_sampah=="kain / cloths","kain",Jenis_sampah),
+         Jenis_sampah = ifelse(Jenis_sampah=="lainnya/ others","lainnya",Jenis_sampah))
+sw2 <- read_csv("http://data.bandung.go.id/dataset/eb104f7f-fdf3-4505-b532-b3ba8654b8cc/resource/af610d2f-08bc-42c3-ac81-0a57384fef71/download/produksi-sampah-menurut-jenisnya-di-kota-bandung-2016.csv") %>%
+  mutate(Tahun=2016, `Jenis Sampah`=tolower(`Jenis Sampah`)) %>%
+  select(Tahun, Jenis_sampah=`Jenis Sampah`, Prod_sampah= `Produksi Sampah (m3/hari)`, Persentase) %>%
+  mutate(Jenis_sampah = ifelse(Jenis_sampah=="sisa makanan / lees", "sisa makanan",Jenis_sampah),
+         Jenis_sampah = ifelse(Jenis_sampah=="kayu.ranting.daun/twigs","kayu, ranting, daun",Jenis_sampah),
+         Jenis_sampah = ifelse(Jenis_sampah=="kertas/paper","kertas",Jenis_sampah),
+         Jenis_sampah = ifelse(Jenis_sampah=="plastik/plastic/","plastik",Jenis_sampah),
+         Jenis_sampah = ifelse(Jenis_sampah=="logam/ metal","logam",Jenis_sampah),
+         Jenis_sampah = ifelse(Jenis_sampah=="kain  cloths","kain",Jenis_sampah),
+         Jenis_sampah = ifelse(Jenis_sampah=="lainnya/ others","lainnya",Jenis_sampah))
+sw3 <- read_csv("http://data.bandung.go.id/dataset/eb104f7f-fdf3-4505-b532-b3ba8654b8cc/resource/43a464df-bd5a-4052-a37f-91156fcc3159/download/produksi-sampah-menurut-jenisnya-di-kota-bandung-2017---.csv") %>%
+  mutate(Tahun=2017, `Jenis Sampah`=tolower(`Jenis Sampah`)) %>%
+  select(Tahun, Jenis_sampah=`Jenis Sampah`, Prod_sampah= `Produksi Sampah (m3)`, Persentase) %>%
+  drop_na()
+sw_jenis <- bind_rows(sw1,sw2,sw3)
 
 usethis::use_data(kual_sungai, KangPisMan, mitra_KangPisMan, bank_sampah,
                   taman, tps, bendungan, mata_air, anak_sungai, pelanggan_am,
                   izin_lingkungan, tanam_pohon1, tanam_pohon2, sw_prod_sumber,
+                  sw_jenis,
                   overwrite = TRUE)

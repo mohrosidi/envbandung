@@ -178,3 +178,15 @@
 #'}
 #' @source \url{http://data.bandung.go.id/dataset/rata-rata-produksi-sampah-berdasarkan-sumber-sampah-di-kota-bandung}
 "sw_prod_sumber"
+
+#' @title Produksi Jenis Sampah Menurut Jenisnya di Kota Bandung
+#' @description Dataset ini berisi produksi jenis sampah menurut jenisnya di Kota Bandung
+#' @format Tibble dengan 27 baris dan 4 variabel:
+#' \describe{
+#'   \item{\code{Tahun}}{  }
+#'   \item{\code{Jenis_sampah}}{jenis sampah}
+#'   \item{\code{Prod_sampah}}{produksi sampah (m3/hari)}
+#'   \item{\code{Persentase}}{persentase tiap jenis sampah}
+#'}
+#' @source \url{http://data.bandung.go.id/dataset/produksi-jenis-sampah-menurut-jenisnya-tahun-2014}
+"sw_jenis"
