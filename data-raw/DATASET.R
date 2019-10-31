@@ -84,7 +84,14 @@ il4 <- read_csv("http://data.bandung.go.id/dataset/6eba04c7-555f-418d-a7b9-6d769
   select(no, nomor_izin, tahun, jenis_lingkungan:bentuk_perusahaan)
 izin_lingkungan <- bind_rows(il1,il2,il3,il4)
 
+tanam_pohon1 <- read_csv("http://data.bandung.go.id/dataset/ee792310-f8d9-4812-9fc2-f4d17c765fc7/resource/76483bff-c81e-4381-a964-ced603e61d3e/download/data-penanaman-pohon-tahun-2012.csv") %>%
+  clean_names()
+
+tanam_pohon2 <- read_csv("http://data.bandung.go.id/dataset/ee792310-f8d9-4812-9fc2-f4d17c765fc7/resource/ae7da370-de47-4d9a-8d7f-1c6922fdaecb/download/rekapitulasi-penanaman-pohon-di-kota-bandung-tahun-2013.csv")%>%
+  clean_names()
+
+
 usethis::use_data(kual_sungai, KangPisMan, mitra_KangPisMan, bank_sampah,
                   taman, tps, bendungan, mata_air, anak_sungai, pelanggan_am,
-                  izin_lingkungan,
+                  izin_lingkungan, tanam_pohon1, tanam_pohon2,
                   overwrite = TRUE)

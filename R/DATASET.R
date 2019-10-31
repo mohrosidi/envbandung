@@ -146,3 +146,25 @@
 #'}
 #' @source \url{http://data.bandung.go.id/dataset/izin-lingkungan-di-kota-bandung}
 "izin_lingkungan"
+
+#' @title Penanaman Pohon Di Kota Bandung 1
+#' @description Dataset mengenai Rekapitulasi Penanaman Pohon Di Kota Bandung berdasarkan kecamatan pada tahun 2012.
+#' @format Tibble dengan 30 baris dan 3 variabel:
+#' \describe{
+#'   \item{\code{nama_kecamtan}}{nama kecamatan}
+#'   \item{\code{pohon_pelindung}}{jumlah pohon pelindung yang ditanam}
+#'   \item{\code{pohon_produktif}}{jumlah pohon produktif yang ditanam}
+#'}
+#' @source \url{http://data.bandung.go.id/dataset/penanaman-pohon-di-kota-bandung/resource/76483bff-c81e-4381-a964-ced603e61d3e}
+"tanam_pohon1"
+
+#' @title Penanaman Pohon Di Kota Bandung 2
+#' @description Dataset mengenai Rekapitulasi Penanaman Pohon Di Kota Bandung berdasarkan SKPD pada tahun 2013.
+#' @format A data frame with 4 rows and 3 variables:
+#' \describe{
+#'   \item{\code{skpd}}{satuan kerja perangkat daerah}
+#'   \item{\code{pohon_pelindung}}{jumlah pohon pelindung yang ditanam}
+#'   \item{\code{pohon_produktif}}{jumlah pohon produktif yang ditanam}
+#'}
+#' @source \url{http://data.bandung.go.id/dataset/penanaman-pohon-di-kota-bandung/resource/ae7da370-de47-4d9a-8d7f-1c6922fdaecb}
+"tanam_pohon2"
