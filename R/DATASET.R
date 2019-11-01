@@ -232,3 +232,17 @@
 #'}
 #' @source \url{http://data.bandung.go.id/dataset/rekapitulasi-jumlah-kepala-keluarga-yang-memenuhi-sanitasi-di-tingkat-rt/resource/c9f5a1ff-fe25-4026-a01e-d3bb8403d632}
 "sanitasi"
+
+#' @title Rekapitulasi Jumlah Cakupan Air Minum Di Tingkat RT (Rukun Tetangga)
+#' @description Dataset ini berisi data rekapitulasi jumlah cakupan air minum di tingkat RT (Rukun Tetangga).
+#' @format Tibble dengan 120 baris dan 6 variabel:
+#' \describe{
+#'   \item{\code{No.}}{ }
+#'   \item{\code{Kecamatan}}{nama kecamatan}
+#'   \item{\code{Kelurahan}}{nama kelurahan}
+#'   \item{\code{Jumlah_krt}}{jumlah kepala rumah tangga}
+#'   \item{\code{Jumlah_kk}}{jumlah kepala keluarga}
+#'   \item{\code{Jumlah_masy_terlayani}}{jumlah masyarakat terlayani Sarana Air Minum untuk minum, mandi, dan cuci (perpipaan atau non perpipaan terlindungi yang layak) (rumah tangga)}
+#'}
+#' @source \url{http://somewhere.important.com/}
+"cakupan_am"
