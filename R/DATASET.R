@@ -285,3 +285,18 @@
 #'}
 #' @source \url{http://data.bandung.go.id/dataset/penggunaan-tanah-berdasarkan-jenis-penggunaan-di-kota-bandung}
 "penggunaan_tanah"
+
+#' @title Data Jumlah Armada Pengangkut Sampah Wilayah Bandung Tahun 2015
+#' @description Data Jumlah Armada Pengangkut Sampah Wilayah Bandung Tahun 2015.
+#' @format Tibble dengan 90 baris dan 7 variabel:
+#' \describe{
+#'   \item{\code{wilayah}}{wilayah layanan}
+#'   \item{\code{no_pol}}{nomor polisi}
+#'   \item{\code{merk}}{merk kendaraan}
+#'   \item{\code{jenis}}{jenis kendaraan}
+#'   \item{\code{kapasitas}}{kapasitas angkut (m3)}
+#'   \item{\code{tahun}}{tahun pengadaan}
+#'   \item{\code{pengemudi}}{nama pengemudi}
+#'}
+#' @source \url{http://data.bandung.go.id/dataset/data-jumlah-armada-pengangkut-sampah-wilayah-bandung-tahun-2015}
+"armada_sampah"

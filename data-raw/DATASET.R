@@ -273,9 +273,26 @@ penggunaan_tanah <- read_csv("http://data.bandung.go.id/dataset/a79ec898-fef1-4f
   clean_names() %>%
   select(-x3)
 
+armada1 <- read_csv("https://git.bandung.go.id/opendatabdg/databdg/raw/master/resources/b85/b21/data-jumlah-armada-pengangkut-sampah-2015---bandung-selatan.csv") %>%
+  mutate(wilayah="Bandung Selatan") %>%
+  select(wilayah, no_pol = `Nomor Polisi`, merk = `Merk Kendaraan`,
+         jenis = `Jenis Kendaraan`, kapasitas = `Kapasitas (M3)`, tahun= Tahun, pengemudi = Pengemudi)
+armada2 <- read_csv("https://git.bandung.go.id/opendatabdg/databdg/raw/master/resources/9df/f24/data-jumlah-armada-pengangkut-sampah-2015---bandung-timur.csv") %>%
+  mutate(wilayah="Bandung Timur") %>%
+  select(wilayah, no_pol = `Nomor Polisi`, merk = `Merk Kendaraan`,
+         jenis = `Jenis Kendaraan`, kapasitas = Kapasitas, tahun= Tahun, pengemudi = Pengemudi) %>%
+  separate(kapasitas, into=c("kapasitas", "buang"), sep=" ") %>%
+  select(-buang) %>%
+  mutate(kapasitas=as.numeric(kapasitas))
+armada3 <- read_csv("https://git.bandung.go.id/opendatabdg/databdg/raw/master/resources/989/06f/data-jumlah-armada-pengangkut-sampah-2015---bandung-utara.csv") %>%
+  mutate(wilayah="Bandung Utara") %>%
+  select(wilayah, no_pol = `Nomor  Polisi`, merk = `Merk Kendaraan`,
+         jenis = `Jenis Kendaraan`, kapasitas = `Kapasitas(M3)`, tahun= Tahun, pengemudi = Pengemudi)
+armada_sampah <- bind_rows(armada1, armada2, armada3)
+
 usethis::use_data(kual_sungai, KangPisMan, mitra_KangPisMan, bank_sampah,
                   taman, tps, bendungan, mata_air, anak_sungai, pelanggan_am,
                   izin_lingkungan, tanam_pohon1, tanam_pohon2, sw_prod_sumber,
                   sw_jenis, angin, udara, sanitasi, cakupan_am, cakupan_am_rt,
-                  air_minum_limbah, penggunaan_tanah,
+                  air_minum_limbah, penggunaan_tanah, armada_sampah,
                   overwrite = TRUE)
