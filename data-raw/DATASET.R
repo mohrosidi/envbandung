@@ -269,9 +269,13 @@ air_min_lim2 <- read_csv("http://data.bandung.go.id/dataset/3839e74a-44a1-42c9-b
   drop_na()
 air_minum_limbah <- bind_rows(air_min_lim1, air_min_lim2)
 
+penggunaan_tanah <- read_csv("http://data.bandung.go.id/dataset/a79ec898-fef1-4f67-b352-2b21ef75c3f5/resource/04959ff9-aaed-4386-af09-6267af4de6d5/download/penggunaan-tanah-berdasarkan-jenis-penggunaan-di-kota-bandung-2016-.csv") %>%
+  clean_names() %>%
+  select(-x3)
+
 usethis::use_data(kual_sungai, KangPisMan, mitra_KangPisMan, bank_sampah,
                   taman, tps, bendungan, mata_air, anak_sungai, pelanggan_am,
                   izin_lingkungan, tanam_pohon1, tanam_pohon2, sw_prod_sumber,
                   sw_jenis, angin, udara, sanitasi, cakupan_am, cakupan_am_rt,
-                  air_minum_limbah,
+                  air_minum_limbah, penggunaan_tanah,
                   overwrite = TRUE)

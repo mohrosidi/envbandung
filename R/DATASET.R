@@ -275,3 +275,13 @@
 #'}
 #' @source \url{http://data.bandung.go.id/dataset/jumlah-pelanggan-air-minum-dan-air-limbah-pdam-tirtawening}
 "air_minum_limbah"
+
+#' @title Penggunaan Tanah Berdasarkan Jenis Penggunaan di Kota Bandung
+#' @description Dataset ini berisi data penggunaan tanah berdasarkan jenis penggunaan di Kota Bandung.
+#' @format Tibble dengan 32 baris dan 2 variabel:
+#' \describe{
+#'   \item{\code{jenis_penggunaan_tanah}}{jenis penggunaan tanah}
+#'   \item{\code{luas_ha}}{luas tanah (Ha)}
+#'}
+#' @source \url{http://data.bandung.go.id/dataset/penggunaan-tanah-berdasarkan-jenis-penggunaan-di-kota-bandung}
+"penggunaan_tanah"
