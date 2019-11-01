@@ -253,8 +253,13 @@ cakupan_am <- read_csv("http://data.bandung.go.id/dataset/afd36b21-4723-454d-ad3
   rename(Jumlah_krt = `Jumlah Kepala Rumah Tangga`, Jumlah_kk =`Jumlah Kepala Keluarga`,
          Jumlah_masy_terlayani = `Jumlah Masyarakat terlayani Sarana Air Minum untuk minum, mandi, dan cuci (perpipaan atau non perpipaan terlindungi yang layak) (rumah tangga)`)
 
+cakupan_am_rt <- read_csv("http://data.bandung.go.id/dataset/9c147ed0-6b08-4f46-97c2-2fd1fd0ff765/resource/3ed0732b-465a-438f-b063-9046e8d7597e/download/data-rekapitulasi-jumlah-cakupan-air-minum-per-rt-tahun-2017.csv") %>%
+  rename(Jumlah_krt = `Jumlah Kepala Rumah Tangga`, Jumlah_kk = `Jumlah Kepala Keluarga`,
+         Jumlah_masy_terlayani = `Jumlah Masyarakat terlayani Sarana Air Minum untuk minum, mandi, dan cuci (perpipaan atau non perpipaan terlindungi yang layak) (rumah tangga)`,
+         Persen_terlayani = `Prosentase Masyarakat terlayani Sarana Air Minum untuk minum, mandi, dan cuci (perpipaan atau non perpipaan terlindungi yang layak)`)
+
 usethis::use_data(kual_sungai, KangPisMan, mitra_KangPisMan, bank_sampah,
                   taman, tps, bendungan, mata_air, anak_sungai, pelanggan_am,
                   izin_lingkungan, tanam_pohon1, tanam_pohon2, sw_prod_sumber,
-                  sw_jenis, angin, udara, sanitasi, cakupan_am,
+                  sw_jenis, angin, udara, sanitasi, cakupan_am, cakupan_am_rt,
                   overwrite = TRUE)

@@ -233,8 +233,8 @@
 #' @source \url{http://data.bandung.go.id/dataset/rekapitulasi-jumlah-kepala-keluarga-yang-memenuhi-sanitasi-di-tingkat-rt/resource/c9f5a1ff-fe25-4026-a01e-d3bb8403d632}
 "sanitasi"
 
-#' @title Rekapitulasi Jumlah Cakupan Air Minum Di Tingkat RT (Rukun Tetangga)
-#' @description Dataset ini berisi data rekapitulasi jumlah cakupan air minum di tingkat RT (Rukun Tetangga).
+#' @title Rekapitulasi Jumlah Cakupan Air Minum Di Tingkat Kelurahan
+#' @description Dataset ini berisi data rekapitulasi jumlah cakupan air minum di tingkat Kelurahan.
 #' @format Tibble dengan 120 baris dan 6 variabel:
 #' \describe{
 #'   \item{\code{No.}}{ }
@@ -246,3 +246,20 @@
 #'}
 #' @source \url{http://somewhere.important.com/}
 "cakupan_am"
+
+#' @title Rekapitulasi Jumlah Cakupan Air Minum Di Tingkat RT (Rukun Tetangga)
+#' @description Dataset ini berisi data rekapitulasi jumlah cakupan air minum di tingkat RT (Rukun Tetangga).
+#' @format Tibble dengan 2681 baris dan 9 variabel:
+#' \describe{
+#'   \item{\code{No.}}{ }
+#'   \item{\code{Kecamatan}}{nama kecamatan}
+#'   \item{\code{Kelurahan}}{nama kelurahan}
+#'   \item{\code{RW}}{rukun warga}
+#'   \item{\code{RT}}{rukun tetangga}
+#'   \item{\code{Jumlah_krt}}{jumlah kepala rumah tangga}
+#'   \item{\code{Jumlah_kk}}{jumlah kepala keluarga}
+#'   \item{\code{Jumlah_masy_terlayani}}{jumlah masyarakat terlayani Sarana Air Minum untuk minum, mandi, dan cuci (perpipaan atau non perpipaan terlindungi yang layak) (rumah tangga)}
+#'   \item{\code{Persen_terlayani}}{prosentase masyarakat terlayani Sarana Air Minum untuk minum, mandi, dan cuci (perpipaan atau non perpipaan terlindungi yang layak)}
+#'}
+#' @source \url{http://data.bandung.go.id/dataset/rekapitulasi-jumlah-cakupan-air-minum-di-tingkat-rt-rukun-tetangga}
+"cakupan_am_rt"

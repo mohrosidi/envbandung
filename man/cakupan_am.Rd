@@ -3,7 +3,7 @@
 \docType{data}
 \name{cakupan_am}
 \alias{cakupan_am}
-\title{Rekapitulasi Jumlah Cakupan Air Minum Di Tingkat RT (Rukun Tetangga)}
+\title{Rekapitulasi Jumlah Cakupan Air Minum Di Tingkat Kelurahan}
 \format{Tibble dengan 120 baris dan 6 variabel:
 \describe{
   \item{\code{No.}}{ }
@@ -20,6 +20,6 @@
 cakupan_am
 }
 \description{
-Dataset ini berisi data rekapitulasi jumlah cakupan air minum di tingkat RT (Rukun Tetangga).
+Dataset ini berisi data rekapitulasi jumlah cakupan air minum di tingkat Kelurahan.
 }
 \keyword{datasets}
