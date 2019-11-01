@@ -263,3 +263,15 @@
 #'}
 #' @source \url{http://data.bandung.go.id/dataset/rekapitulasi-jumlah-cakupan-air-minum-di-tingkat-rt-rukun-tetangga}
 "cakupan_am_rt"
+
+#' @title Jumlah Pelanggan Air Minum dan Air Limbah PDAM Tirtawening
+#' @description Dataset ini berisi mengenai jumlah pelanggan air minum dan air limbah PDAM Tirtawening Kota Bandung.
+#' @format Tibble dengan 24 baris dan 4 variabel:
+#' \describe{
+#'   \item{\code{bulan}}{ }
+#'   \item{\code{tahun}}{ }
+#'   \item{\code{jumlah_pelanggan_air_minum}}{jumlah pelanggan air minum}
+#'   \item{\code{jumlah_pelanggan_air_limbah}}{jumlah pelanggan air limbah}
+#'}
+#' @source \url{http://data.bandung.go.id/dataset/jumlah-pelanggan-air-minum-dan-air-limbah-pdam-tirtawening}
+"air_minum_limbah"

@@ -258,8 +258,20 @@ cakupan_am_rt <- read_csv("http://data.bandung.go.id/dataset/9c147ed0-6b08-4f46-
          Jumlah_masy_terlayani = `Jumlah Masyarakat terlayani Sarana Air Minum untuk minum, mandi, dan cuci (perpipaan atau non perpipaan terlindungi yang layak) (rumah tangga)`,
          Persen_terlayani = `Prosentase Masyarakat terlayani Sarana Air Minum untuk minum, mandi, dan cuci (perpipaan atau non perpipaan terlindungi yang layak)`)
 
+air_min_lim1 <- read_csv("https://git.bandung.go.id/opendatabdg/databdg/raw/master/resources/6cd/319/jumlah-pelanggan-air-minum--limbah-pdam-tirtawening-tahun-2015.csv") %>%
+  mutate(tahun = 2015) %>%
+  clean_names() %>%
+  select(bulan, tahun, everything())
+air_min_lim2 <- read_csv("http://data.bandung.go.id/dataset/3839e74a-44a1-42c9-b7df-561090bd59f0/resource/f2a85545-b2b1-4826-847a-488879f5889d/download/jumlah-pelanggan-air-minum-dan-air-limbah-pdam-2016.csv") %>%
+  mutate(tahun = 2016) %>%
+  clean_names() %>%
+  select(bulan, tahun, everything()) %>%
+  drop_na()
+air_minum_limbah <- bind_rows(air_min_lim1, air_min_lim2)
+
 usethis::use_data(kual_sungai, KangPisMan, mitra_KangPisMan, bank_sampah,
                   taman, tps, bendungan, mata_air, anak_sungai, pelanggan_am,
                   izin_lingkungan, tanam_pohon1, tanam_pohon2, sw_prod_sumber,
                   sw_jenis, angin, udara, sanitasi, cakupan_am, cakupan_am_rt,
+                  air_minum_limbah,
                   overwrite = TRUE)
