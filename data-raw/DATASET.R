@@ -245,8 +245,12 @@ air5 <- read_csv("http://data.bandung.go.id/dataset/0ce8520e-5fef-404c-992c-bced
   drop_na()
 udara <- bind_rows(air1,air2,air3,air4,air5)
 
+sanitasi <- read_csv("http://data.bandung.go.id/dataset/4b071d2d-39a0-4ab1-a9a5-f3c2d2ff0fd1/resource/c9f5a1ff-fe25-4026-a01e-d3bb8403d632/download/data-rekapitulasi-jumlah-kepala-keluarga-yang--memenuhi-sanitasi-tahun-2017.csv") %>%
+  rename(Jumlah_krt = `Jumlah Kepala Rumah Tangga`,Jumlah_kk = `Jumlah Kepala Keluarga`, Jumlah_akses_mck = `Jumlah Masyarakat memiliki akses MCK keluarga / MCK bersama (rumah tangga)`,
+         Jumlah_mck_sesuai = `Jumlah MCK keluarga/MCK bersama sesuai persyaratan teknis (memiliki kloset leher angsa yang terhubung dengan septic-tank) (rumah tangga)`)
+
 usethis::use_data(kual_sungai, KangPisMan, mitra_KangPisMan, bank_sampah,
                   taman, tps, bendungan, mata_air, anak_sungai, pelanggan_am,
                   izin_lingkungan, tanam_pohon1, tanam_pohon2, sw_prod_sumber,
-                  sw_jenis, angin, udara,
+                  sw_jenis, angin, udara, sanitasi,
                   overwrite = TRUE)
