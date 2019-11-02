@@ -1,10 +1,3 @@
-
------
-
-output: github\_document
-
------
-
 # envbandung
 
 `envbandung` merupakan `R` *package* yang berisi kumpulan data
