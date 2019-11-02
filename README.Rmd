@@ -41,10 +41,10 @@ library(data.table)
 x <- data(package="envbandung")
 y <- x[["results"]]
 tabel <- as_tibble(y[,3:4]) %>%
-  rename(Judul = Item, Keterangan=Title)
+  rename(`Nama Dataset` = Item, Keterangan=Title)
 
 knitr::kable(
-  data.table(tabel), caption = "Daftar Dataset yang Tersedia"
+  data.table(tabel)
 )
 ```
 

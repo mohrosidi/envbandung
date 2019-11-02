@@ -1,3 +1,10 @@
+
+-----
+
+output: github\_document
+
+-----
+
 # envbandung
 
 `envbandung` merupakan `R` *package* yang berisi kumpulan data
@@ -33,7 +40,7 @@ help(nama_dataset)
 
 ## Dataset yang Tersedia
 
-| Judul              | Keterangan                                                               |
+| Nama Dataset       | Keterangan                                                               |
 | :----------------- | :----------------------------------------------------------------------- |
 | KangPisMan         | Kegiatan Sosialisasi KangPisMan Kota Bandung                             |
 | air\_minum\_limbah | Jumlah Pelanggan Air Minum dan Air Limbah PDAM Tirtawening               |
@@ -61,8 +68,6 @@ help(nama_dataset)
 | tanam\_pohon2      | Penanaman Pohon Di Kota Bandung 2                                        |
 | tps                | Lokasi Tempat Pembuangan Sampah Kota Bandung                             |
 | udara              | Keadaan Udara Menurut Bulan di Kota Bandung                              |
-
-Daftar Dataset yang Tersedia
 
 ## Ucapan Terimakasih
 
