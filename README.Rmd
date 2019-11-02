@@ -35,16 +35,15 @@ help(nama_dataset)
 
 ## Dataset yang Tersedia
 
-```{r, include=FALSE}
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 library(tidyverse)
+library(data.table)
 x <- data(package="envbandung")
 y <- x[["results"]]
 tabel <- as_tibble(y[,3:4]) %>%
   rename(Judul = Item, Keterangan=Title)
 
-knitr::kable(
-  tabel, caption = 'Dataset yang tersedia'
-)
+data.table(tabel)
 ```
 
 
