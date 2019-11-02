@@ -339,3 +339,21 @@
 #'}
 #' @source \url{http://data.bandung.go.id/dataset/data-rekapitulasi-pengukuran-pencemaran-udara-dan-suhu-kota-bandung}
 "penc_udara_suhu"
+
+#' @title Data Sebaran Lokasi TPS PD Kebersihan Kota Bandung Tahun 2016
+#' @description Data berisi sebaran lokasi TPS PD Kebersihan Kota Bandung Tahun 2016.
+#' @format Tibble dengan 154 baris dan 10 variabel:
+#' \describe{
+#'   \item{\code{no}}{ }
+#'   \item{\code{id_tps}}{ }
+#'   \item{\code{wilayah}}{wilayah layanan}
+#'   \item{\code{kecamatan}}{nama kecamatan}
+#'   \item{\code{nama_tps}}{nama tps}
+#'   \item{\code{lokasi_tps}}{nama jalan lokasi tps}
+#'   \item{\code{latitude}}{koordinat garis lintang}
+#'   \item{\code{longitude}}{koordinat garis bujur}
+#'   \item{\code{sampah_masuk}}{sampah masuk ke tps (m3/hari)}
+#'   \item{\code{sampah_diangkut}}{sampah diangkut ke tpa (m3/hari)}
+#'}
+#' @source \url{http://data.bandung.go.id/dataset/data-sebaran-lokasi-tps-pd-kebersihan-kota-bandung-tahun-2016}
+"lokasi_tps"

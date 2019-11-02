@@ -302,10 +302,16 @@ penc_udara_suhu <- bind_rows(penc2, penc3, penc4) %>%
   rename(stasiun = statsiun) %>%
   bind_rows(penc1)
 
+lokasi_tps <- read_csv("https://git.bandung.go.id/opendatabdg/databdg/raw/master/resources/8c9/707/data-sebaran-lokasi-tps-kota-bandung-tahun-2016.csv") %>%
+  clean_names() %>%
+  rename(sampah_masuk = sampah_yang_masuk_u_00b1_m_u_00b3_hari,
+         sampah_diangkut = sampah_diangkut_ke_tpa_u_00b1_m_u_00b3_hari,
+         lokasi_tps = lokasi_tps_jalan)
+
 usethis::use_data(kual_sungai, KangPisMan, mitra_KangPisMan, bank_sampah,
                   taman, tps, bendungan, mata_air, anak_sungai, pelanggan_am,
                   izin_lingkungan, tanam_pohon1, tanam_pohon2, sw_prod_sumber,
                   sw_jenis, angin, udara, sanitasi, cakupan_am, cakupan_am_rt,
                   air_minum_limbah, penggunaan_tanah, armada_sampah, sapuan_jalan,
-                  penc_udara_suhu,
+                  penc_udara_suhu, lokasi_tps,
                   overwrite = TRUE)
