@@ -316,3 +316,26 @@
 #'}
 #' @source \url{http://data.bandung.go.id/dataset/data-hasil-sapuan-bulan-februari-2015-sampai-februari-2016}
 "sapuan_jalan"
+
+#' @title Data Rekapitulasi Pengukuran Pencemaran Udara dan Suhu Kota Bandung
+#' @description Sesuai dengan PP no. 41 tahun 1999 tentang Pengendalian Pencemaran Udara, data rekapitulasi pengukuran pencemaran udara dan suhu kota Bandung pertriwulan berdasarkan 4 stasiun pemantau pencemaran kota Bandung. Keempat stasiun tersebut terletak di daerah Dago, Pajajaran, Ujungberung dan Gedebage. Data ini disajikan dalam rataan perhari.
+#' @format Tibble dengan 331 baris dan 16 variabel:
+#' \describe{
+#'   \item{\code{stasiun}}{lokasi stasiun : Dago, Ujungberung, Pajajaran, Gedebage}
+#'   \item{\code{waktu}}{waktu pengamatan}
+#'   \item{\code{co}}{konsentrasi CO}
+#'   \item{\code{so2}}{konsentrasi SO2}
+#'   \item{\code{no}}{konsentrasi NO}
+#'   \item{\code{no2}}{konsentrasi NO2}
+#'   \item{\code{pm10}}{konsentrasi PM10}
+#'   \item{\code{pm25}}{konsentrasi PM2.5}
+#'   \item{\code{o3}}{konsentrasi O3}
+#'   \item{\code{wspd}}{kecepatan angin}
+#'   \item{\code{wdir}}{arah angin}
+#'   \item{\code{temperature}}{suhu udara}
+#'   \item{\code{press}}{tekanan}
+#'   \item{\code{rh}}{kelembaban relatif}
+#'   \item{\code{uv}}{radiasi uv}
+#'}
+#' @source \url{http://data.bandung.go.id/dataset/data-rekapitulasi-pengukuran-pencemaran-udara-dan-suhu-kota-bandung}
+"penc_udara_suhu"

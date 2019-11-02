@@ -294,9 +294,18 @@ sapuan_jalan <- read_csv("https://git.bandung.go.id/opendatabdg/databdg/raw/mast
   clean_names() %>%
   rename(jumlah_sampah_m3 = jumlah_sampah_m_u_00b3)
 
+penc1 <- read_csv("https://git.bandung.go.id/opendatabdg/databdg/raw/master/resources/409/36d/vrataanhariandago.csv")
+penc2 <- read_csv("https://git.bandung.go.id/opendatabdg/databdg/raw/master/resources/51d/b09/vrataanhariangedebage.csv")
+penc3 <- read_csv("https://git.bandung.go.id/opendatabdg/databdg/raw/master/resources/f80/746/vrataanharianujungberung.csv")
+penc4 <- read_csv("https://git.bandung.go.id/opendatabdg/databdg/raw/master/resources/b96/45d/vrataanharianpajajaran.csv")
+penc_udara_suhu <- bind_rows(penc2, penc3, penc4) %>%
+  rename(stasiun = statsiun) %>%
+  bind_rows(penc1)
+
 usethis::use_data(kual_sungai, KangPisMan, mitra_KangPisMan, bank_sampah,
                   taman, tps, bendungan, mata_air, anak_sungai, pelanggan_am,
                   izin_lingkungan, tanam_pohon1, tanam_pohon2, sw_prod_sumber,
                   sw_jenis, angin, udara, sanitasi, cakupan_am, cakupan_am_rt,
                   air_minum_limbah, penggunaan_tanah, armada_sampah, sapuan_jalan,
+                  penc_udara_suhu,
                   overwrite = TRUE)
