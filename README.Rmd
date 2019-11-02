@@ -43,7 +43,9 @@ y <- x[["results"]]
 tabel <- as_tibble(y[,3:4]) %>%
   rename(Judul = Item, Keterangan=Title)
 
-data.table(tabel)
+knitr::kable(
+  data.table(tabel), caption = "Daftar Dataset yang Tersedia"
+)
 ```
 
 
