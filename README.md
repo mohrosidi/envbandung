@@ -1,6 +1,10 @@
+
 # envbandung
 
-`envbandung` merupakan `R` *package* yang berisi kumpulan data lingkungan hidup yang di ambil dari Open Data Kota Bandung. Dataset pada *package* ini telah dilakukan transformasi sehingga memenuhi kaidah *tidy data*.
+`envbandung` merupakan `R` *package* yang berisi kumpulan data
+lingkungan hidup yang di ambil dari Open Data Kota Bandung. Dataset pada
+*package* ini telah dilakukan transformasi sehingga memenuhi kaidah
+*tidy data*.
 
 ## Cara Pemasangan
 
@@ -10,25 +14,31 @@ remotes::install_github("mohrosidi/envbandung ")
 
 ## Cek Dataset
 
-Untuk mengecek dataset apa saja yang tersedia dalam *package* ini, jalankan *code* berikut:
+Untuk mengecek dataset apa saja yang tersedia dalam *package* ini,
+jalankan *code* berikut:
 
 ``` r
 data(package = "envbandung")
 ```
 
-untuk memperoleh informasi terkait dataset yang akan digunakan, jalankan *code* berikut:
+untuk memperoleh informasi terkait dataset yang akan digunakan, jalankan
+*code* berikut:
 
 ``` r
-?nama_dataset
+?nama_dataset # ketik nama dataset
 
 # atau
 
 help(nama_dataset)
 ```
 
+## Dataset yang Tersedia
+
 ## Ucapan Terimakasih
 
-Proyek ini dapat terlaksana atas upaya data terbuka yang tersaji di [Open Data Kota Bandung](http://data.bandung.go.id/).
+Proyek ini dapat terlaksana atas upaya data terbuka yang tersaji di
+[Open Data Kota
+Bandung](http://data.bandung.go.id/).
 
 ## Lisensi
 
