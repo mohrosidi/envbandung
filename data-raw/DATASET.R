@@ -290,9 +290,13 @@ armada3 <- read_csv("https://git.bandung.go.id/opendatabdg/databdg/raw/master/re
          jenis = `Jenis Kendaraan`, kapasitas = `Kapasitas(M3)`, tahun= Tahun, pengemudi = Pengemudi)
 armada_sampah <- bind_rows(armada1, armada2, armada3)
 
+sapuan_jalan <- read_csv("https://git.bandung.go.id/opendatabdg/databdg/raw/master/resources/67d/9c8/data-hasil-sapuan-yang-dilaksanakan-oleh-pihak-ketiga.csv") %>%
+  clean_names() %>%
+  rename(jumlah_sampah_m3 = jumlah_sampah_m_u_00b3)
+
 usethis::use_data(kual_sungai, KangPisMan, mitra_KangPisMan, bank_sampah,
                   taman, tps, bendungan, mata_air, anak_sungai, pelanggan_am,
                   izin_lingkungan, tanam_pohon1, tanam_pohon2, sw_prod_sumber,
                   sw_jenis, angin, udara, sanitasi, cakupan_am, cakupan_am_rt,
-                  air_minum_limbah, penggunaan_tanah, armada_sampah,
+                  air_minum_limbah, penggunaan_tanah, armada_sampah, sapuan_jalan,
                   overwrite = TRUE)
