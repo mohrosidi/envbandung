@@ -342,6 +342,8 @@ pengomposan <- read_csv("https://git.bandung.go.id/opendatabdg/databdg/raw/maste
 keterangan_tpa <- read_csv("https://git.bandung.go.id/opendatabdg/databdg/raw/master/resources/9b4/688/data-keterangan-tpa-pd-kebersihan.csv") %>%
   clean_names()
 
+sumur_resapan <- read_csv("http://data.bandung.go.id/dataset/62035429-abd7-49dd-bdfe-987a76dc1ef9/resource/9f1093fb-9592-4f20-92cb-9dd8fbb2cd08/download/data-sumur-resapan-lubang-biopori-tahun-2012.csv") %>%
+  clean_names()
 
 usethis::use_data(kual_sungai, KangPisMan, mitra_KangPisMan, bank_sampah,
                   taman, tps, bendungan, mata_air, anak_sungai, pelanggan_am,
@@ -349,5 +351,5 @@ usethis::use_data(kual_sungai, KangPisMan, mitra_KangPisMan, bank_sampah,
                   sw_jenis, angin, udara, sanitasi, cakupan_am, cakupan_am_rt,
                   air_minum_limbah, penggunaan_tanah, armada_sampah, sapuan_jalan,
                   penc_udara_suhu, lokasi_tps, ambien, bak_sampah, cuaca,
-                  pengangkutan_tps, pengomposan, keterangan_tpa,
+                  pengangkutan_tps, pengomposan, keterangan_tpa, sumur_resapan,
                   overwrite = TRUE)

@@ -446,3 +446,14 @@
 #'}
 #' @source \url{http://data.bandung.go.id/dataset/data-keterangan-tpa-pd-kebersihan-tahun-2005-2015}
 "keterangan_tpa"
+
+#' @title Pembuatan Sumur Resapan Dan Lubang Biopori di Kota Bandung
+#' @description Dataset ini berisi Rekapitulasi Pembuatan Sumur Resapan Dan Lubang Biopori di Kota Bandung.
+#' @format Tibble dengan 30 baris dan 3 variabel:
+#' \describe{
+#'   \item{\code{nama_kecamatan}}{nama kecamatan}
+#'   \item{\code{sumur_resapan}}{jumlah sumur resapan}
+#'   \item{\code{lubang_biopori}}{jumlah lubang biopori}
+#'}
+#' @source \url{http://data.bandung.go.id/dataset/pembuatan-sumur-resapan-dan-lubang-biopori-di-kota-bandung}
+"sumur_resapan"
