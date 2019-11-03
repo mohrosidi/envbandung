@@ -435,3 +435,14 @@
 #'}
 #' @source \url{http://data.bandung.go.id/dataset/data-pengomposan-dan-pencacahan-di-bidang-pengelolaan-tpa}
 "pengomposan"
+
+#' @title Data Keterangan TPA PD Kebersihan Tahun 2005 - 2015
+#' @description Dataset ini berisi mengenai data keterangan Tempat Pembuangan Akhir (TPA) Perusahaan Daerah Kebersihan Kota Bandung Tahun 2005-2015.
+#' @format Tibble dengan 6 baris dan 3 variabel:
+#' \describe{
+#'   \item{\code{no}}{}
+#'   \item{\code{nama_tpa}}{}
+#'   \item{\code{keterangan}}{}
+#'}
+#' @source \url{http://data.bandung.go.id/dataset/data-keterangan-tpa-pd-kebersihan-tahun-2005-2015}
+"keterangan_tpa"
