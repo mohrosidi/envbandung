@@ -325,10 +325,14 @@ cuaca2014 <- read_csv("http://data.bandung.go.id/dataset/c381970c-89b7-48c8-86e4
          lpm = lpm_percent)
 cuaca <- bind_rows(cuaca2013, cuaca2014)
 
+pengangkutan_tps <- read_csv("https://git.bandung.go.id/opendatabdg/databdg/raw/master/resources/f0c/d10/data-pengangkutantps-2005---2015.csv") %>%
+  clean_names()
+
 usethis::use_data(kual_sungai, KangPisMan, mitra_KangPisMan, bank_sampah,
                   taman, tps, bendungan, mata_air, anak_sungai, pelanggan_am,
                   izin_lingkungan, tanam_pohon1, tanam_pohon2, sw_prod_sumber,
                   sw_jenis, angin, udara, sanitasi, cakupan_am, cakupan_am_rt,
                   air_minum_limbah, penggunaan_tanah, armada_sampah, sapuan_jalan,
                   penc_udara_suhu, lokasi_tps, ambien, bak_sampah, cuaca,
+                  pengangkutan_tps,
                   overwrite = TRUE)
