@@ -419,3 +419,19 @@
 #'}
 #' @source \url{http://data.bandung.go.id/dataset/data-pengangkutan-tps-tahun-2005-2015/resource/7c755a73-30a7-4543-8f9d-ad21c30c349a}
 "pengangkutan_tps"
+
+#' @title Data Pengomposan dan Pencacahan di Bidang Pengelolaan TPA
+#' @description Data Pengomposan dan Pencacahan di Bidang Pengelolaan TPA
+#' @format Tibble dengan 14 baris dan 8 variabel:
+#' \describe{
+#'   \item{\code{no}}{}
+#'   \item{\code{tps}}{nama tps}
+#'   \item{\code{tahun}}{tahun pendataan}
+#'   \item{\code{sampah_organik}}{volume sampah organik (m3)}
+#'   \item{\code{sampah_anorganik}}{volume sampah anorganik (m3)}
+#'   \item{\code{sampah_cacahan}}{volume sampah cacahan (m3)}
+#'   \item{\code{pengomposan}}{volume pengomposan (m3)}
+#'   \item{\code{produksi_kompos}}{volume produksi kompos (m3)}
+#'}
+#' @source \url{http://data.bandung.go.id/dataset/data-pengomposan-dan-pencacahan-di-bidang-pengelolaan-tpa}
+"pengomposan"

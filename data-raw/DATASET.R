@@ -328,11 +328,21 @@ cuaca <- bind_rows(cuaca2013, cuaca2014)
 pengangkutan_tps <- read_csv("https://git.bandung.go.id/opendatabdg/databdg/raw/master/resources/f0c/d10/data-pengangkutantps-2005---2015.csv") %>%
   clean_names()
 
+pengomposan <- read_csv("https://git.bandung.go.id/opendatabdg/databdg/raw/master/resources/ad3/0e1/data-pengomposan-dan-pencacahan-di-bidang-pengelolaan-tpa-20160531-065832-utc.csv") %>%
+  select(no = NO, tps=TPS, tahun=TAHUN, sampah_organik=`SAMPAH ORGANIK (M<U+00B3>)`,
+         sampah_anorganik=`SAMPAH ANORGANIK (M<U+00B3>)`, sampah_cacahan=`SAMPAH CACAHAN (M<U+00B3>)`, pengomposan = `PENGOMPOSAN (M<U+00B3>)`,
+         produksi_kompos=`PRODUKSI KOMPOS (M<U+00B3>)`) %>%
+  mutate_all(function(x){ifelse(x=="NULL", NA, x)}) %>%
+  mutate(sampah_anorganik=as.numeric(sampah_anorganik),
+         sampah_cacahan=as.numeric(sampah_cacahan),
+         pengomposan=as.numeric(pengomposan),
+         produksi_kompos=as.numeric(produksi_kompos))
+
 usethis::use_data(kual_sungai, KangPisMan, mitra_KangPisMan, bank_sampah,
                   taman, tps, bendungan, mata_air, anak_sungai, pelanggan_am,
                   izin_lingkungan, tanam_pohon1, tanam_pohon2, sw_prod_sumber,
                   sw_jenis, angin, udara, sanitasi, cakupan_am, cakupan_am_rt,
                   air_minum_limbah, penggunaan_tanah, armada_sampah, sapuan_jalan,
                   penc_udara_suhu, lokasi_tps, ambien, bak_sampah, cuaca,
-                  pengangkutan_tps,
+                  pengangkutan_tps, pengomposan,
                   overwrite = TRUE)
