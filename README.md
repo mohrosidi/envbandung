@@ -1,4 +1,3 @@
-
 # envbandung
 
 `envbandung` merupakan `R` *package* yang berisi kumpulan data
@@ -49,15 +48,20 @@ help(nama_dataset)
 | cakupan\_am\_rt    | Rekapitulasi Jumlah Cakupan Air Minum Di Tingkat RT (Rukun Tetangga)                               |
 | cuaca              | Cuaca dan Curah Hujan Kota Bandung                                                                 |
 | izin\_lingkungan   | Izin Lingkungan di Kota Bandung                                                                    |
+| keterangan\_tpa    | Data Keterangan TPA PD Kebersihan Tahun 2005 - 2015                                                |
 | kual\_sungai       | Kualitas Air Sungai Kota Bandung Tahun 2018                                                        |
 | lokasi\_tps        | Data Sebaran Lokasi TPS PD Kebersihan Kota Bandung Tahun 2016                                      |
 | mata\_air          | Sumber Mata Air di Kota Bandung                                                                    |
 | mitra\_KangPisMan  | Data Mitra Komersial KangPisman - Tahun 2019                                                       |
 | pelanggan\_am      | Jumlah Pelanggan Air Minum Menurut Golongan Tarif di Kota Bandung                                  |
 | penc\_udara\_suhu  | Data Rekapitulasi Pengukuran Pencemaran Udara dan Suhu Kota Bandung                                |
+| pengangkutan\_tps  | Data Pengangkutan TPS Tahun 2005-2015                                                              |
 | penggunaan\_tanah  | Penggunaan Tanah Berdasarkan Jenis Penggunaan di Kota Bandung                                      |
+| pengomposan        | Data Pengomposan dan Pencacahan di Bidang Pengelolaan TPA                                          |
+| rth                | Ruang Terbuka Hijau di Kota Bandung Berdasarkan Kecamatan                                          |
 | sanitasi           | Rekapitulasi Jumlah Kepala Keluarga Yang Memenuhi Sanitasi Di Tingkat RT                           |
 | sapuan\_jalan      | Data Hasil Sapuan Bulan Februari 2015 sampai Februari 2016                                         |
+| sumur\_resapan     | Pembuatan Sumur Resapan Dan Lubang Biopori di Kota Bandung                                         |
 | sw\_jenis          | Produksi Jenis Sampah Menurut Jenisnya di Kota Bandung                                             |
 | sw\_prod\_sumber   | Rata-rata Produksi Sampah Berdasarkan Sumber Sampah di Kota Bandung                                |
 | taman              | Luas Taman Kota Di Sub Wilayah Kota (SWK) Bandung Tahun 2018                                       |
