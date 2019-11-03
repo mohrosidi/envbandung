@@ -308,10 +308,13 @@ lokasi_tps <- read_csv("https://git.bandung.go.id/opendatabdg/databdg/raw/master
          sampah_diangkut = sampah_diangkut_ke_tpa_u_00b1_m_u_00b3_hari,
          lokasi_tps = lokasi_tps_jalan)
 
+ambien <- read_csv("https://git.bandung.go.id/opendatabdg/databdg/raw/master/resources/186/c8e/hasil-pengukuran-kualitas-udara-ambien-roadside-berdasarkan-jenis-udara-tahun-2014.csv") %>%
+  clean_names()
+
 usethis::use_data(kual_sungai, KangPisMan, mitra_KangPisMan, bank_sampah,
                   taman, tps, bendungan, mata_air, anak_sungai, pelanggan_am,
                   izin_lingkungan, tanam_pohon1, tanam_pohon2, sw_prod_sumber,
                   sw_jenis, angin, udara, sanitasi, cakupan_am, cakupan_am_rt,
                   air_minum_limbah, penggunaan_tanah, armada_sampah, sapuan_jalan,
-                  penc_udara_suhu, lokasi_tps,
+                  penc_udara_suhu, lokasi_tps, ambien,
                   overwrite = TRUE)

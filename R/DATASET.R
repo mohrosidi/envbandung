@@ -357,3 +357,23 @@
 #'}
 #' @source \url{http://data.bandung.go.id/dataset/data-sebaran-lokasi-tps-pd-kebersihan-kota-bandung-tahun-2016}
 "lokasi_tps"
+
+#' @title Hasil Pengukuran Kualitas Udara Ambien Roadside Berdasarkan Jenis Udara di Kota Bandung Tahun 2014
+#' @description Dataset ini berisi Hasil Pengukuran Kualitas Udara Ambien Roadside Berdasarkan Jenis Udara di Kota Bandung Tahun 2014
+#' @format A data frame with 27 rows and 12 variables:
+#' \describe{
+#'   \item{\code{lokasi}}{lokasi pengukuran}
+#'   \item{\code{no2}}{konsentrasi NO2 (ppm)}
+#'   \item{\code{so2}}{konsentrasi SO2 (ppm)}
+#'   \item{\code{co}}{konsentrasi CO (ppm)}
+#'   \item{\code{o3}}{konsentrasi O3 (ppm)}
+#'   \item{\code{hc}}{konsentrasi hidrokarbon (ppm)}
+#'   \item{\code{pb}}{konsentrasi Pb (ppm)}
+#'   \item{\code{pm_2_5}}{konsentrasi PM2.5 (ppm)}
+#'   \item{\code{tsp}}{konsentrasi total suspended particulate (ppm)}
+#'   \item{\code{h2s}}{konsentrasi H2S (ppm)}
+#'   \item{\code{nh3}}{konsentrasi amonia (ppm)}
+#'   \item{\code{kebisingan}}{tingkat kebisingan (db)}
+#'}
+#' @source \url{http://data.bandung.go.id/dataset/hasil-pengukuran-kualitas-udara-ambien-roadside-berdasarkan-jenis-udara-di-kota-bandung-tahun-2014}
+"ambien"
