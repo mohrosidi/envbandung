@@ -313,10 +313,22 @@ ambien <- read_csv("https://git.bandung.go.id/opendatabdg/databdg/raw/master/res
 
 bak_sampah <- read_csv("https://git.bandung.go.id/opendatabdg/databdg/raw/master/resources/387/1bb/kapasitas-bak-pengangkutan-sampah.csv")
 
+cuaca2013 <- read_csv("https://git.bandung.go.id/opendatabdg/databdg/raw/master/resources/48d/5c1/cuaca-dan-curah-hujan-di-kota-bandung-menurut-bulan-tahun-2013-1.csv") %>%
+  clean_names() %>%
+  rename(temperatur_ratarata=temperatur_ratarata_o_c,temperatur_max=temperatur_max_o_c,
+         temperatur_min=temperatur_min_o_c, curah_hujan=curah_hujan_mm, hari_hujan=hari_hujan_hari,
+         lpm = lpm_percent)
+cuaca2014 <- read_csv("http://data.bandung.go.id/dataset/c381970c-89b7-48c8-86e4-854dd7182cf9/resource/62b588e2-e64a-4217-9e56-1665cea59571/download/cuaca-dan-curah-hujan-di-kota-bandung-menurut-bulan-tahun-2014.csv") %>%
+  clean_names() %>%
+  rename(temperatur_ratarata=temperature_rata_rata, temperatur_max=temperature_maks,
+         temperatur_min=temperature_min,curah_hujan=curah_hujan_mm, hari_hujan=hujan_hari,
+         lpm = lpm_percent)
+cuaca <- bind_rows(cuaca2013, cuaca2014)
+
 usethis::use_data(kual_sungai, KangPisMan, mitra_KangPisMan, bank_sampah,
                   taman, tps, bendungan, mata_air, anak_sungai, pelanggan_am,
                   izin_lingkungan, tanam_pohon1, tanam_pohon2, sw_prod_sumber,
                   sw_jenis, angin, udara, sanitasi, cakupan_am, cakupan_am_rt,
                   air_minum_limbah, penggunaan_tanah, armada_sampah, sapuan_jalan,
-                  penc_udara_suhu, lokasi_tps, ambien, bak_sampah,
+                  penc_udara_suhu, lokasi_tps, ambien, bak_sampah, cuaca,
                   overwrite = TRUE)

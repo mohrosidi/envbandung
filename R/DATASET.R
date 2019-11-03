@@ -387,3 +387,18 @@
 #'}
 #' @source \url{http://data.bandung.go.id/dataset/kapasitas-bak-penampungan-sampah-untuk-wilayah-kota-bandung}
 "bak_sampah"
+
+#' @title Cuaca dan Curah Hujan Kota Bandung
+#' @description Dataset mengenai cuaca dan curah hujan di kota Bandung
+#' @format Tibble dengan 26 baris dan 9 variabel:
+#' \describe{
+#'   \item{\code{bulan}}{ }
+#'   \item{\code{temperatur_ratarata}}{temperatur rata-rata (oC)}
+#'   \item{\code{temperatur_max}}{temperatur maksimum (oC)}
+#'   \item{\code{temperatur_min}}{temperatur minimum (oC)}
+#'   \item{\code{curah_hujan}}{curah hujan (mm)}
+#'   \item{\code{hari_hujan}}{hari hujan (hari)}
+#'   \item{\code{lpm}}{lpm persen}
+#'}
+#' @source \url{http://data.bandung.go.id/dataset/cuaca-dan-curah-hujan-kota-bandung-tahun-2013}
+"cuaca"
