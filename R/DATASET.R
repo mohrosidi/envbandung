@@ -457,3 +457,18 @@
 #'}
 #' @source \url{http://data.bandung.go.id/dataset/pembuatan-sumur-resapan-dan-lubang-biopori-di-kota-bandung}
 "sumur_resapan"
+
+#' @title Ruang Terbuka Hijau di Kota Bandung Berdasarkan Kecamatan
+#' @description Dataset ini berisi data ruang terbuka hijau di kota Bandung berdasarkan Kecamatan.
+#' @format Tibble dengan 648 baris dan 7 variabel:
+#' \describe{
+#'   \item{\code{no}}{}
+#'   \item{\code{sub_wilayah_kota}}{}
+#'   \item{\code{kecamatan}}{}
+#'   \item{\code{taman_per_kecamatan}}{nama taman}
+#'   \item{\code{lokasi}}{}
+#'   \item{\code{luas_rth_lama}}{luas rth lama (m2)}
+#'   \item{\code{hasil_updating_rth}}{luas rth hasil pembaharuan}
+#'}
+#' @source \url{http://data.bandung.go.id/dataset/ruang-terbuka-hijau-di-kota-bandung-berdasarkan-kecamatan}
+"rth"

@@ -345,11 +345,17 @@ keterangan_tpa <- read_csv("https://git.bandung.go.id/opendatabdg/databdg/raw/ma
 sumur_resapan <- read_csv("http://data.bandung.go.id/dataset/62035429-abd7-49dd-bdfe-987a76dc1ef9/resource/9f1093fb-9592-4f20-92cb-9dd8fbb2cd08/download/data-sumur-resapan-lubang-biopori-tahun-2012.csv") %>%
   clean_names()
 
+rth <- read_csv("http://data.bandung.go.id/dataset/abcf0e00-fd3c-43a0-8bd1-9b6393e15023/resource/8b5e6ad0-99f9-45e0-a6eb-9418001ad5cb/download/data-ruang-terbuka-hijau-per-kecamatan-tahun-2017.csv") %>%
+  rename(luas_rth_lama=`Luas (M2) Lama`, hasil_updating_rth = `Hasil Updating RTH (m2)`)%>%
+  clean_names() %>%
+  mutate_all(function(x){ifelse(x=="-", NA, x)})%>%
+  mutate(luas_rth_lama=as.numeric(luas_rth_lama), hasil_updating_rth=as.numeric(hasil_updating_rth))
+
 usethis::use_data(kual_sungai, KangPisMan, mitra_KangPisMan, bank_sampah,
                   taman, tps, bendungan, mata_air, anak_sungai, pelanggan_am,
                   izin_lingkungan, tanam_pohon1, tanam_pohon2, sw_prod_sumber,
                   sw_jenis, angin, udara, sanitasi, cakupan_am, cakupan_am_rt,
                   air_minum_limbah, penggunaan_tanah, armada_sampah, sapuan_jalan,
                   penc_udara_suhu, lokasi_tps, ambien, bak_sampah, cuaca,
-                  pengangkutan_tps, pengomposan, keterangan_tpa, sumur_resapan,
+                  pengangkutan_tps, pengomposan, keterangan_tpa, sumur_resapan, rth,
                   overwrite = TRUE)
