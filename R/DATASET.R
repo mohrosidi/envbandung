@@ -360,7 +360,7 @@
 
 #' @title Hasil Pengukuran Kualitas Udara Ambien Roadside Berdasarkan Jenis Udara di Kota Bandung Tahun 2014
 #' @description Dataset ini berisi Hasil Pengukuran Kualitas Udara Ambien Roadside Berdasarkan Jenis Udara di Kota Bandung Tahun 2014
-#' @format A data frame with 27 rows and 12 variables:
+#' @format Tibble dengan 27 baris dan 12 variabel:
 #' \describe{
 #'   \item{\code{lokasi}}{lokasi pengukuran}
 #'   \item{\code{no2}}{konsentrasi NO2 (ppm)}
@@ -377,3 +377,13 @@
 #'}
 #' @source \url{http://data.bandung.go.id/dataset/hasil-pengukuran-kualitas-udara-ambien-roadside-berdasarkan-jenis-udara-di-kota-bandung-tahun-2014}
 "ambien"
+
+#' @title Kapasitas Bak Penampungan Sampah Untuk Wilayah Kota Bandung
+#' @description Dataset kapasitas bak penampungan sampah untuk wilayah kota Bandung
+#' @format Tibble dengan 20 baris dan 2 variabel:
+#' \describe{
+#'   \item{\code{nama_bak}}{nama bak sampah}
+#'   \item{\code{kapasitas}}{kapasitas (m3)}
+#'}
+#' @source \url{http://data.bandung.go.id/dataset/kapasitas-bak-penampungan-sampah-untuk-wilayah-kota-bandung}
+"bak_sampah"

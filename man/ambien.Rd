@@ -4,7 +4,7 @@
 \name{ambien}
 \alias{ambien}
 \title{Hasil Pengukuran Kualitas Udara Ambien Roadside Berdasarkan Jenis Udara di Kota Bandung Tahun 2014}
-\format{A data frame with 27 rows and 12 variables:
+\format{Tibble dengan 27 baris dan 12 variabel:
 \describe{
   \item{\code{lokasi}}{lokasi pengukuran}
   \item{\code{no2}}{konsentrasi NO2 (ppm)}
